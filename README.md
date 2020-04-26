@@ -2,7 +2,7 @@
 Automated Cryptocurrency Trading Platform for Poloniex.com. Algorithms are based on Python 3.7. Currently, a platform is using traditional MACD and RSI analysis to detect signs when the best time to buy and sell cryptocurrencies. <br/>
 **Algorithm description** is under **Trading_Strategies.py** file description.
 # Instruction
-*   **IMPORTANT** Open main.py, Trading_Simulation.py, Trading_Strategies.py, Trading_Operations.py files and put API (Poloniex) and secret keys (Poloniex) for *source_API* variable to connect with your account. API and secret keys are accessible through the personal Poloniex account with all the tutorials already in <br/>
+*   **IMPORTANT** Open main.py, Trading_Simulation.py, Trading_Strategies.py, Trading_Operations.py files and put API (Poloniex) and secret keys (Poloniex) for *source_API* variable to connect with your account. API and secret keys are accessible through the personal Poloniex account with all the tutorials already in https://docs.poloniex.com/#create-an-api-key <br/>
 *   **main.py is the main file to run operations under section *PROCESSES*** <br/>
 *   In main.py only under section *MODIFY PARAMETERS*, write parameters you want to use: cryptocurrency pair, data range, periodic between data (given availabilities are given in comments) <br/>
 * To run trading part, in main.py under section *PROCESSES* run **MACD_RSI_STRATEGY**. If you want to stop automated trading, you have to stop python file manually <br/>
