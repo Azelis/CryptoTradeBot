@@ -72,7 +72,7 @@ chart_general.time_series(price)
 RSI_price = TechnicalIndicators().RSI(price)
 chart_technical.time_series_RSI(RSI_price)
 
-# Make 
+# Run trading bot (uncomment)
 # MACD_RSI_STRATEGY(market_currency = market_currency,
 #                   trade_currency = trade_currency,
 #                   data_range_time = data_range_time, 
