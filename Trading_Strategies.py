@@ -23,7 +23,6 @@ def MACD_RSI_STRATEGY(trade_currency, market_currency, data_range_time = 604800,
     #default row_y for excel to record
     row_y = 1
     ################################################################
-    #simulation = for simulation purpose, if 0, the function will stop, to run simulatino once
     while True:
         try:
             # Get currency pair
