@@ -14,11 +14,11 @@ Automated Cryptocurrency Trading Platform for Poloniex.com. Algorithms are based
 # Files (for editing)
 * **Graphs.py** - graphs by function **chart_technical** for RSI and MACD values and **chart_general** for general price <br/>
 * **Poloniex.py** - All poloniex platform available functions (https://docs.poloniex.com/#introduction) to gather data and execute operations <br/>
-* **Technical.py** - RSI and MACD strategies written by given https://www.tradingview.com/wiki/MACD_(Moving_Average_Convergence/Divergence) platform <br/>
+* **Technical.py** - RSI and MACD strategies written by given https://www.tradingview.com platform <br/>
 * **Trading_Operations.py** - Executing operations to buy or sell cryptocurrencies and has ability (if enabled) to save operation in excel file <br/>
 * **Trading_Save_Data.py** - Gives ability to save data in excel file <br/>
 * **Trading_Simulation.py** - Simulating all taken data by taken crypto-pair while using RSI-MACD strategy. Starting index = 100 and given output is a plot which shows how index changed. In case to change simulation parameters, a section *parameters* is given to change default RSI and MACD values which decides when is a signal to execute an opeation <br/>
-* **Trading_Strategies.py** - algorithm which **1.** gets current MACD, RSI prices with the last made trade type (to avoid doing the same trading type). **2.** By given default value https://www.tradingview.com/wiki/Relative_Strength_Index_(RSI), if RSI value is more than 70, algorithm is willing to sell, if less than 30 - buy. **3.** Once approved by RSI to make operation, MACD value is compared by given https://www.tradingview.com/ default value, whether oth signals gives a sign to buy or sell **4.** Once current RSI and MACD values are declaring to do the same operation, algorithm is completing the deal. **IMPORTANT** Algorithm is trading by all amount of money in tradable pair. <br/>
+* **Trading_Strategies.py** - algorithm which **1.** gets current MACD, RSI prices with the last made trade type (to avoid doing the same trading type). **2.** By given default value https://www.tradingview.com/wiki/Relative_Strength_Index_(RSI), if RSI value is more than 70, algorithm is willing to sell, if less than 30 - buy. **3.** Once approved by RSI to make operation, MACD value is compared by given https://www.tradingview.com/wiki/MACD_(Moving_Average_Convergence/Divergence) default value, whether oth signals gives a sign to buy or sell **4.** Once current RSI and MACD values are declaring to do the same operation, algorithm is completing the deal. **IMPORTANT** Algorithm is trading by all amount of money in tradable pair. <br/>
 * **main.py** - The main file do pre-analysis and run trading bot
 
 # Upcoming plan
