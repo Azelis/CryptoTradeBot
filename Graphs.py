@@ -1,5 +1,10 @@
 import matplotlib.pyplot as plt
 
+"""
+chart_general - graph for raw price data
+chart_technical - graph for MACD and RSI data
+"""
+
 class chart_general:
     def time_series(x):
         plt.title(x.name)
