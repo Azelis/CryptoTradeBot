@@ -1,12 +1,13 @@
 from Trading_Save_Data import excel_store
 from Poloniex import poloniex
 
-# <API Key>, <Secret Key>``
-source_API = poloniex("",
-"")
+# <API Key>, <Secret Key>)
+source_API = poloniex("API Key>",
+"Secret Key")
 
-# The key point to record data in excel file
-# In order to record, excel="yes" should be called in the function
+""" The key point to record data in excel file
+    In order to record, excel="yes" should be called in the function
+"""
 def Buy_Crypto(currency_pair, buy_price, record_amount, transaction_time=0, type_trade=0, record_price=0,row_y=0, excel="no"):
         source_API.buy(currency_pair, 
                        buy_price, 
