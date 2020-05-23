@@ -15,7 +15,7 @@ class TechnicalIndicators:
         a[:period] = a[period]
         return a
     
-    #Moving Average Convergence Divergence
+    # Moving Average Convergence Divergence (MACD) #
     def MACD(self, price, nslow=26, nfast=12, nNine=9):
         emaslow = self.EMA(price, nslow)
         emafast = self.EMA(price, nfast)
@@ -28,7 +28,8 @@ class TechnicalIndicators:
                                 "emafast":emafast})
         return macd_df
 
-    #Relative strength index from Tradingview : https://www.tradingview.com/wiki/Talk:Relative_Strength_Index_(RSI)
+    # Relative strength index (RSI) #
+    # From Tradingview : https://www.tradingview.com/wiki/Talk:Relative_Strength_Index_(RSI) #
     def RSI(self,price, period=14):
        delta = price.diff()
        delta.iloc[0]
