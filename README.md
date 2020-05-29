@@ -11,7 +11,7 @@ Automated Cryptocurrency Trading Platform for Poloniex.com. Algorithms are based
 (Option) In order to fullfit (**enable**) trade deal once running *MACD_RSI_STRATEGY* variable *do_trade* should be called as **do_trade = "yes"** <br/>
 (Option) Change in Trading_Save_Data.py variable *direction* excel file direction, to gather all completed trades. After every trade forward in the other location, because once you will start to trade again, data will be modified in the same excel cells. In order to **enable** to save in excel file, once running *MACD_RSI_STRATEGY* variable *excel* should be called as **excel = "yes"** <br/>
 
-# Files (for editing)
+# Files
 * **Graphs.py** - graphs by function **chart_technical** for RSI and MACD values and **chart_general** for general price <br/>
 * **Poloniex.py** - All poloniex platform available functions (https://docs.poloniex.com/#introduction) to gather data and execute operations <br/>
 * **Technical.py** - RSI and MACD strategies written by given https://www.tradingview.com platform <br/>
