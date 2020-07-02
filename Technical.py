@@ -39,6 +39,7 @@ class TechnicalIndicators:
 
        roll_up1 = up.ewm(com=(period-1), min_periods=period).mean()
        roll_down1 = down.abs().ewm(com=(period-1), min_periods=period).mean()
+       
        RS1 = roll_up1 / roll_down1
        RSI1 = 100.0 - (100.0 / (1.0 + RS1))
        return RSI1

@@ -2,7 +2,9 @@ import matplotlib.pyplot as plt
 
 """
 chart_general - graph for raw price data
+
 chart_technical - graph for MACD and RSI data
+MACD can be based on signals and original data
 """
 
 class chart_general:
@@ -10,6 +12,7 @@ class chart_general:
         plt.title(x.name)
         plt.plot(x)
         return plt.show()
+
     def daily_distribution(x):
         x.pct_change().plot.hist(bins=50)
         plt.xlabel('adjusted close 1-day percent change')
@@ -20,17 +23,18 @@ class chart_technical:
         plt.title(original_data.name + " MACD")
         plt.plot(macd_full["emaslow"])
         plt.plot(macd_full["emafast"]) 
-        plt.plot(original_data)         
+        plt.plot(original_data)
+
     def time_series_MACD_signals(macd_full):
         plt.title(" MACD Signals")
         plt.plot(macd_full["macd_signal"]) 
         plt.plot(macd_full["macd"]) 
         plt.axhline(y=0, color="black")
         return plt.show()
+
     def time_series_RSI(x):
         plt.title("RSI")
         plt.plot(x, color="black")
         plt.axhline(y=30, color="red")
         plt.axhline(y=70, color="red")
         return plt.show()
-        
