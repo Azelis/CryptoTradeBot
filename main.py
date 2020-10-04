@@ -1,15 +1,12 @@
-######### Functions from other python files #########
 from Poloniex import poloniex,createTimeStamp
 from Graphs import chart_technical, chart_general
 from Technical import TechnicalIndicators
 from Trading_Strategies import MACD_RSI_STRATEGY
 from Trading_Simulation import MACD_RSI_SIMULATION
 
-######### Libraries #########
 from time import gmtime, strftime
 import matplotlib.pyplot as plt
 import pandas as pd
-##############################
 
 
 ############# MODIFY PARAMETERS #################
