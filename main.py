@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-############# MODIFY PARAMETERS ################
+############# MODIFY PARAMETERS ###############
 
 #<API Key>, <Secret Key>``
 source_API = poloniex("",
