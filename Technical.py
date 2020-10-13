@@ -2,11 +2,11 @@ import numpy as np
 import pandas as pd
 
 class TechnicalIndicators:
-    def __init__(self,access_open="open"):
-        self.access_open = access_open
+    def __init__(self,prices):
+        self.prices = prices
 	#Exponential Moving Average / Period=12 annd Period=26, defined on MACD
-    def EMA(self,prices, period=12):
-        x = np.asarray(prices) #Make a vector, o prices ("close")
+    def EMA(self, period=12):
+        x = np.asarray(self.prices) #Make a vector, o prices ("close")
         weights = None
         weights = np.exp(np.linspace(-1., 0., period))
         weights /= weights.sum()
@@ -16,11 +16,11 @@ class TechnicalIndicators:
         return a
     
     # Moving Average Convergence Divergence (MACD) #
-    def MACD(self, price, nslow=26, nfast=12, nNine=9):
-        emaslow = self.EMA(price, nslow)
-        emafast = self.EMA(price, nfast)
+    def MACD(self, nslow=26, nfast=12, nNine=9):
+        emaslow = self.EMA(nslow)
+        emafast = self.EMA(nfast)
         macd = emafast - emaslow
-        macd_signal = self.EMA(macd, nNine)
+        macd_signal = self.EMA(nNine)
         signal = macd - macd_signal
         #macd, macd_signal, signal,emaslow,emafast
         macd_df = pd.DataFrame({"macd":macd, "macd_signal":macd_signal, 
@@ -30,8 +30,8 @@ class TechnicalIndicators:
 
     # Relative strength index (RSI) #
     # From Tradingview : https://www.tradingview.com/wiki/Talk:Relative_Strength_Index_(RSI) #
-    def RSI(self,price, period=14):
-       delta = price.diff()
+    def RSI(self, period=14):
+       delta = self.prices .diff()
        delta.iloc[0]
        up, down = delta.copy(), delta.copy()
        up[up < 0.0] = 0.0

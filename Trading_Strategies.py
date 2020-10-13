@@ -13,7 +13,6 @@ source_API = poloniex("", "")
 def MACD_RSI_STRATEGY(trade_currency, market_currency, data_range_time = 604800, periodic = 1800, do_trade = "no", excel="no"):
     
     ################## parameters for strategies ##################
-    strategy = TechnicalIndicators()
     macd_fast = 12
     macd_slow = 26
     rsi_period = 14
@@ -43,12 +42,13 @@ def MACD_RSI_STRATEGY(trade_currency, market_currency, data_range_time = 604800,
             chart_data = pd.DataFrame(source_API.returnChartData(currency_pair,start_time_days,periodic))
             
             ########## Prepare MACD data ##########
-            macd = strategy.MACD(chart_data['close'],macd_slow,macd_fast,nNine)
+            strategy = TechnicalIndicators(chart_data['close'])
+            macd = strategy.MACD(macd_slow,macd_fast,nNine)
             macdSignal = macd["signal"].iloc[-1]
             macdSignal_position = macd["macd"].iloc[-1]
             
             ########## Prepare RSI data ##########
-            rsi = strategy.RSI(chart_data['close'],rsi_period).iloc[-1]
+            rsi = strategy.RSI(rsi_period).iloc[-1]
             
             ##### General information #####
             
