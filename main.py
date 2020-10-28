@@ -45,6 +45,10 @@ currency_pair = market_currency + "_" + trade_currency
 end_time = int(createTimeStamp(strftime("%Y-%m-%d %H:%M:%S", gmtime())))
 start_time = end_time - data_range_time 
 
+import pdb 
+
+pdb.set_trace()
+
 # Market data about stock
 chart_data = pd.DataFrame(source_API.returnChartData(currency_pair,start_time,periodic))
 
@@ -66,7 +70,7 @@ price = chart_data["close"].rename(market_currency + "-" + trade_currency)
 chart_general.time_series(price)
 
 # RSI plot
-RSI_price = TechnicalIndicators().RSI(price)
+RSI_price = TechnicalIndicators().RSI()
 chart_technical.time_series_RSI(RSI_price)
 
 # Run trading bot (uncomment)
